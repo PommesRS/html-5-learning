@@ -1,18 +1,63 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
+    <script type="text/javascript">
+        // Klick-Funktion für #hamburger hinzufügen
+document.getElementById('hamburger').addEventListener('click', navStatus);
+
+// Prüfen ob die Navigation geöffnet oder geschlossen ist
+function navStatus() {
+  if (document.body.classList.contains('hamburger-active')) {
+   navClose();
+ } 
+ else {
+   navOpen();
+ }
+}
+
+// Wenn die Navi geschlossen wird, Klasse für »offen« entfernen
+function navClose() {
+  document.body.classList.remove('hamburger-active');
+}
+
+// Wenn die Navi geöffnet wird, Klasse für »geschlossen« entfernen
+function navOpen() {
+  document.body.classList.add('hamburger-active');
+}
+    </script>
 <meta charset="utf-8">
 <title>oreo.com</title>
+<link rel="stylesheet" href="./main.css"/>
+<style type="text/css">
+    *{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body{
+  background:
+}
+
+.mitte{
+    text-align: center;
+}
+
+</style>
 </head>
 <body>
-
-<h1>How to eat Oreos</h1>
-
-<ol>
+    <div id="hamburger" class="hamburger-icon-container">
+  <span class="hamburger-icon"></span>
+</div>
+<a href="index.html" title="Start Seite">&lt;</a>
+<h1 class="mitte">Wie man Oreos ist</h1>
+<ol class="mitte">
     <li>open up the Oreo box/carton</li>
     <li>tear open the plastik bag</li>
     <li>take out on Oreo cookie</li>
-    <h4>How to Make a Double oreo.</h4>
+    <img src="https://www.adizz.de/media/images/info/OREO-Keks-1-farbig-110103303-1-8115416.jpg"
+			width="200" height="155">
+    <h4 class="mitte">Wie man eine doppel Oreo macht.</h4>
         <ol>
             <li>take two Oreos out of the box</li>
             <li>peel the top of one oreo of</li>
@@ -22,10 +67,11 @@
 
         </ol>
 </ol>
-<h1>Wilde weitere Infos zu Oreos findest du <a href="https://de.oreo.eu" title="Oreos" target="_blank">hier!</a></h1>
+
+<h2>Wilde weitere Infos zu Oreos findest du <a href="https://de.oreo.eu" title="Oreos" target="_blank">hier!</a></h2>
 <!-- Mein Penis ist sehr Groß! -->
-<h4>Zurück zur Startseite findest du  
-        <a href="index.html" title="Start Seite">hier.</a> 
-    </h4>
+  
+ 
+
 </body>
-</html> 
+</html>
