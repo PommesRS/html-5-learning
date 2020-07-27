@@ -1,77 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Pseudo Class Selectors</title>
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wilde Seite lol</title>
+  <style>
 
-header li {
-  list-style: none;
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
-a:link, a:visited {
-  text-decoration: none;
-  background-color: green;
-  border: 1px solid blue;
-  color: black;
-  display: block;
-  width: 200px;
+
+h1 {
+ background-image: url("forest.jpg");
+ background-color: #cccccc;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: auto;
+}
+
+
+
+.subtitle {
   text-align: center;
-  margin-bottom: 1px;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
 }
 
-a:hover, a:active {
-  background-color: red;
-  color: purple;
-}
 
-header li:nth-child(3) {
-  font-size: 24px;
-}
 
-section div:nth-child(odd) {
-  background-color: gray;
+.nav li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+  list-style: none;
+  text-decoration: none;
+  text-align: left;
 }
-
-section div:nth-child(4):hover {
-  background-color: green;
+.button1{
+background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
   cursor: pointer;
+  padding-left: 1000px;
 }
 
-</style>
+
+.button1 {
+
+  color: white; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: black;
+
+}
+  </style>
 </head>
 <body>
-<h1>Pseudo Class Selectors</h1>
 
-<header>
-  <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="http://goo.gl/V0Wl6s" target="_blank">AngularJS Course</a></li>
-    <li><a href="http://www.facebook.com/CourseraWebDev" target="_blank">Facebook Fan Page</a></li>
-  </ul>
-</header>
+  <header2>
 
-<section>
-  <div>DIV 1</div>
-  <div>DIV 2</div>
-  <div>DIV 3</div>
-  <div>DIV 4</div>
-  <div>DIV 5</div>
-  <div>DIV 6</div>
-  <div>DIV 7</div>
-  <div>DIV 8</div>
-  <div>DIV 9</div>
-  <div>DIV 10</div>
-  <div>DIV 11</div>
-  <div>DIV 12</div>
-  <div>DIV 13</div>
-  <div>DIV 14</div>
-  <div>DIV 15</div>
-  <div>DIV 16</div>
-  <div>DIV 17</div>
-  <div>DIV 18</div>
-  <div>DIV 19</div>
-  <div>DIV 20</div>
-</section>
+    <ul class="nav">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#clients">Our Clients</a></li>  
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+      
+      
+      
+    </hmenu>
 
+    <h1 class="headimg">   
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+        <div class="subtitle">
+          We provide new tchnologies for reusable energie sources
+        </div>
+      <br>
+      <div>
+        <input class="button1" type="button" value="Experience"> </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+  </h1>
+</header2>
 </body>
 </html>
