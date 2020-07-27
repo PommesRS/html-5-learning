@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ecologics</title>
-
+    <title>Ecologics</title>
+    
 <style>
 
 body{
     background-image: url("background.png");
     width: 1920px;
     height: 1080px;
+    background-repeat: no-repeat;
 }
 
 
 
     *{
-        font-family:sans-serif;
+        font-family: sans-serif;
     }
     .nav{
         background-color:#d8d8d9;
-        margin:0px;
-        padding:30px;
+        margin-top: -10px;
+        padding:10px;
+
     }
     .getstarted{
         float: right;
         text-align: center;
-        background: linear-gradient(to right, #00a2ff, #00ffa2);
+        background-color: #00a2ff;
         border-radius: 5px;
         padding-top: 0.1in;
         padding-bottom: 0.1in;
@@ -36,45 +38,83 @@ body{
         cursor: pointer;  
         font-weight: bold;
         font-size: 35px;
-        margin-top: 80px; 
+        margin-top: 16px; 
+        margin-right: 50px;
+        transition: background 0.5s;    
     }
 
-
-    .menu{
-        list-style-type: none;
-        font-size: 50px;
-        background-color: #a0a0a0;
-        float: left;
-        margin-top: -237px;
-        padding-top: 258px;
-        padding-right: 50px;
-        padding-bottom: 140px;
-        color:white;
+    .getstarted:hover{
+        background-color: #00f7a9;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     }
 
     .Logo {
-       font-size: 120px;
+       font-size: 50px;
        color: black;
+       border-radius: 5px;
     }
 
     .wave{
     background-image: url("wave.png");
     float: right;
     margin-right: 5px;
+    
 }
 
-.logo{
-    padding-left: 280px;
+.logoleave{
+    padding-left: 500px;
 }
-    
-.menubtn{
-    
-    cursor: pointer;;
-}
+
+
 
 ul li{
     cursor: pointer;
 }
+
+.dropbtn {
+  background-color: #a0a0a0;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #a0a0a0;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size: 20px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #d8d8d9}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
 
 </style>
     
@@ -82,26 +122,23 @@ ul li{
 
 </head>
 <body>
+<header1>
     <div class="nav">
-        <img class="menubtn" src="menu.png">
-        <img class="logo" src="logo.png">
+        <div class="dropdown">
+      <button class="dropbtn">Menu</button>
+      <div class="dropdown-content">
+        <a href="index.html">Seiten Navigator</a>
+        <a href="ekologics.html">Home</a>
+        <a href="ecoABOUT.html">About</a>
+        <a href="ecoSERVICE">Service</a>
+        <a href="ecoPRODUCTS">Products</a>
+        <a href="ecoCONTACT">Contact</a>
+      </div>
+    </div>
+        <img class="logoleave" src="logo.png" width="61" height="74.5">
         <a class="Logo">Ecologics </a>
         <a class="getstarted">GET STARTED</a>
     </div>
-        <ul class="menu">
-            <li>About</li>
-            <br>
-            <br>
-            <li>Products</li>
-            <br>
-            <br>
-            <li>Service</li>
-            <br>
-            <br>
-            <li>Contact</li>
-            <br>
-            <br>
-        </ul>
-    
+</header1> 
 </body>
 </html>
