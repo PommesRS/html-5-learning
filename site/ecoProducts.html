@@ -19,41 +19,23 @@ body{
     *{
         font-family: sans-serif;
     }
+
+/*Navigationbar start*/
+
     .nav{
         background-color:#d8d8d9;
         margin-top: -10px;
         padding:10px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);}
 
-    }
-    .getstarted{
-        float: right;
-        text-align: center;
-        background-color: #00a2ff;
-        border-radius: 5px;
-        padding-top: 0.1in;
-        padding-bottom: 0.1in;
-        padding-left: 0.1in;
-        padding-right: 0.1in;
-        color: white;
-        cursor: pointer;  
-        font-weight: bold;
-        font-size: 35px;
-        margin-top: 16px; 
-        margin-right: 50px;
-        transition: background 0.5s;    
-    }
 
-    .getstarted:hover{
-        background-color: #00f7a9;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    }
 
     .Logo {
         font-size: 50px;
         color: black;
         border-radius: 5px;
         text-align: center;
+        text-decoration: none;
     }
 
     .wave{
@@ -116,8 +98,34 @@ ul li{
   display: block;
 }
 
+/*navigationbar end*/
+/*Main content start*/
 
+.maingen {
+    text-align: center;
+}
 
+.products li{
+    list-style: none;
+    border-radius: 5pt;
+    border-color: gray;
+    border: solid;
+    border-width: 1px;
+    display: inline-block;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 90px;
+}
+
+.products h4{
+    cursor:pointer; 
+    background-color: #181818;
+    color: white;
+}
+
+/*Main content end*/
 
 </style>
     
@@ -142,14 +150,27 @@ Navigation bar
       </div>
     </div>
         <img class="logoleave" src="logo.png" width="61" height="74.5">
-        <a class="Logo">Ecologics </a>
-        <a class="getstarted">Legen sie los!</a>
+        <a href="ekologics.html" class="Logo">Ecologics </a>
+        
     </div>
 </header1>
 <!--===============================--
 Main Content
 --===============================-->
+<div class="maingen">
+<div>
+<h1>Hohlen sie sichnoch heute die neusen errungenschaften der Ökologischen technologie!</h1>
+<p>Für großfirmen oder sogar daheim.</p>
+</div>
 
-
+<br>
+<br>
+<br>
+<div class="products">
+    <li><img src="Badewasser.jpg" width="384" height="288" alt="Badewasser"><h4><br>Benuztes Badewasser<br><br></h4></li>
+    <li><img src="alte-bonbons.jpg.png" width="384" height="288" alt="BonBons"><h4><br>Getrocknete Bonbons<br><br></h4></li>
+    <li><img src="toilette.jpg.png" width="384" height="288" alt="Toilette"><h4><br>Eine dreckige toilette<br><br></h4></li>
+</div>
+</div>
 </body>
 </html>
