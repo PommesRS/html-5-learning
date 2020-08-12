@@ -3,108 +3,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wilde Seite lol</title>
+  <title>Document</title>
+
+<script>
+  $(document).ready(function () {
+
+// if user clicked on button, the overlay layer or the dialogbox, close the dialog	
+$('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {		
+  $('#dialog-overlay, #dialog-box').hide();		
+  return false;
+});
+
+// if user resize the window, call the same function again
+// to make sure the overlay fills the screen and dialogbox aligned to center	
+$(window).resize(function () {
+  
+  //only do it if the dialog box is not hidden
+  if (!$('#dialog-box').is(':hidden')) popup();		
+});	
+
+
+});
+
+//Popup dialog
+function popup(message) {
+  
+// get the screen height and width  
+var maskHeight = $(document).height();  
+var maskWidth = $(window).width();
+
+// calculate the values for center alignment
+var dialogTop =  (maskHeight/3) - ($('#dialog-box').height());  
+var dialogLeft = (maskWidth/2) - ($('#dialog-box').width()/2); 
+
+// assign values to the overlay and dialog box
+$('#dialog-overlay').css({height:maskHeight, width:maskWidth}).show();
+$('#dialog-box').css({top:dialogTop, left:dialogLeft}).show();
+
+// display the message
+$('#dialog-message').html(message);
+    
+}
+</script>
+
   <style>
+    #dialog-overlay {
 
-*{
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
+/* set it to fill the whil screen */
+width:100%; 
+height:100%;
 
-h1 {
- background-image: url("forest.jpg");
- background-color: #cccccc;
- background-repeat: no-repeat;
- background-position: center;
- background-size: auto;
-}
+/* transparency for different browsers */
+filter:alpha(opacity=50); 
+-moz-opacity:0.5; 
+-khtml-opacity: 0.5; 
+opacity: 0.5; 
+background:#000; 
 
+/* make sure it appear behind the dialog box but above everything else */
+position:absolute; 
+top:0; left:0; 
+z-index:3000; 
 
-
-.subtitle {
-  text-align: center;
-  color: white;
-  font-size: 50px;
-  font-weight: bold;
-}
-
-
-
-.nav li {
-  display: inline-block;
-  font-size: 20px;
-  padding: 20px;
-  list-style: none;
-  text-decoration: none;
-  text-align: left;
-}
-.button1{
-background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  padding-left: 1000px;
+/* hide it by default */
+display:none;
 }
 
 
-.button1 {
+#dialog-box {
 
-  color: white; 
-  border: 2px solid #4CAF50;
+/* css3 drop shadow */
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+/* css3 border radius */
+border-radius: 5px;
+border-radius: 5px;
+
+background:#eee;
+/* styling of the dialog box, i have a fixed dimension for this demo */ 
+width:328px; 
+
+/* make sure it has the highest z-index */
+position:absolute; 
+z-index:5000; 
+
+/* hide it by default */
+display:none;
 }
 
-.button1:hover {
-  background-color: #4CAF50;
-  color: black;
+#dialog-box .dialog-content {
+/* style the content */
+text-align:left; 
+padding:10px; 
+margin:13px;
+color:#666; 
+font-family:arial;
+font-size:11px; 
+}
 
+a.button {
+/* styles for button */
+margin:10px auto 0 auto;
+text-align:center;
+display: block;
+width:50px;
+padding: 5px 10px 6px;
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+line-height: 1;
+
+/* button color */
+background-color: #e33100;
+
+/* css3 implementation :) */
+/* rounded corner */
+border-radius: 5px;
+border-radius: 5px;
+
+/* drop shadow */
+box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+
+/* text shaow */
+text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+border-bottom: 1px solid rgba(0,0,0,0.25);
+position: relative;
+cursor: pointer;
+
+}
+
+a.button:hover {
+background-color: #c33100;	
+}
+
+/* extra styling */
+#dialog-box .dialog-content p {
+font-weight:700; margin:0;
+}
+
+#dialog-box .dialog-content ul {
+margin:10px 0 10px 20px; 
+padding:0; 
+height:50px;
 }
   </style>
 </head>
 <body>
-
-  <header2>
-
-    <ul class="nav">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#clients">Our Clients</a></li>  
-      <li><a href="#contact">Contact Us</a></li>
-    </ul>
-      
-      
-      
-    </hmenu>
-
-    <h1 class="headimg">   
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-        <div class="subtitle">
-          We provide new tchnologies for reusable energie sources
-        </div>
-      <br>
-      <div>
-        <input class="button1" type="button" value="Experience"> </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-  </h1>
-</header2>
+  <div id="dialog-overlay"></div>
+<div id="dialog-box">
+	<div class="dialog-content">
+		<div id="dialog-message"></div>
+		<a href="#" class="button">Close</a>
+	</div>
+</div>
 </body>
 </html>

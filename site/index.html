@@ -2,6 +2,22 @@
 <html>
 <head>
 <title>Seiten Navigator</title>
+<script>
+  const pressed = [];
+    const secretCode = 'mhindex';
+
+    window.addEventListener('keyup', (e) => {
+        console.log(e.key);
+        pressed.push(e.key);
+        pressed.length > secretCode.length && pressed.shift()
+        ;
+        if(pressed.join('').includes(secretCode)){
+            console.log('Penis')
+            window.location = 'MH-index.html'
+        }
+        console.log(pressed);
+    });
+</script>
 <style type="text/css">
 	
 body{
@@ -99,8 +115,9 @@ img:hover {
     	<li><a href="Oreo.html" title="Oreo Seite">Oreo Seite</a></li>
       <li><a href="Text.html" title="Text Seite">Text Seite</a></li>
       <li><a href="burger.html" title="Test Seite">Test Seite</a></li>
+      <li><a href="MH-index.html" title="MS">menschen-handel</a></li>
       <li><a href="ekologics.html" title="Ecologics">Ecologics</a></li>
-
+      
 </header>
 </ul>
 </body>

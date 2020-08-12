@@ -4,7 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecologics</title>
-    
+    <script>
+      const pressed = [];
+    const secretCode = 'apfel';
+
+    window.addEventListener('keyup', (e) => {
+        console.log(e.key);
+        pressed.push(e.key);
+        pressed.length > secretCode.length && pressed.shift()
+        ;
+        if(pressed.join('').includes(secretCode)){
+            console.log('Penis')
+            window.location = 'https://google.com/';
+        }
+        console.log(pressed);
+    });
+    </script>
 <style>
 
 body{
@@ -188,3 +203,5 @@ Main Content
 </div>
 </body>
 </html>
+
+
