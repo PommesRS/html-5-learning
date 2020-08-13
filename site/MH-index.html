@@ -20,6 +20,20 @@
         }
         console.log(pressed);
     });
+    const pressed1 = [];
+    const secretCode1 = '38';
+
+    window.addEventListener('keyup', (e) => {
+        console.log(e.key);
+        pressed1.push(e.key);
+        pressed1.length > secretCode1.length && pressed1.shift()
+        ;
+        if(pressed1.join('').includes(secretCode1)){
+            console.log('Penis')
+            window.location = 'https://pornhub.com/'
+        }
+        console.log(pressed);
+    });
 </script>
 <style>
 
@@ -175,9 +189,19 @@ ul2 li{
     transition: color 0.3s;
 }
 
+.buybtntxt{
+
+    text-align: center;
+    color: white;
+}
+
 .buybtn:hover{
     background-color: rgba(255,145,0,1);
     color: black;
+}
+
+.empf{
+    font-size: 13px;
 }
 
 section{
@@ -223,9 +247,9 @@ section{
         <section id="Schwarz">
             <h4 class="strich">_______________________________________________________________________________________________________________________________________________</h4>
                 <ul2>
-                    <li><a><h1 class="buybtn">Lebendig</h1></li></a>
-                    <li class="bsptxt1"><a><h1 class="buybtn">Tot</h1></li></a>
-                    <li class="bsptxt1"><a><h1 class="buybtn">Gehacktes</h1></li></a>
+                    <li><a type="_blank"><h3 class="buybtntxt">Kaufen sie jetzt einen Lebendigen Schwarzen <br>Sklaven der perfekt auf ihre Wünsche <br>zugeschnitten ist!</h3><h1 class="buybtn">Lebendig</h1></li></a>
+                    <li class="bsptxt1"><a><h3 class="buybtntxt">Kaufen sie jetzt einen Toten Schwarzen <br>Sklaven der perfekt auf ihre Wünsche <br>zugeschnitten ist!</h3><h1 class="buybtn">Tot</h1></li></a>
+                    <li class="bsptxt1"><a><h3 class="buybtntxt">Kaufen sie sich noch heuten einen gehackten <br>schwarzen man! <br><span class="empf">Wir empfehlen das Hack zu einem Burger pattie zu verarbeiten.</h3><h1 class="buybtn">Gehacktes</h1></li></a>
             </ul2>
     </div>
 <div>
@@ -245,7 +269,7 @@ section{
 --===============================-->
 <div>
 <h4 class="footerstrich">_______________________________________________________________________________________________________________________________________________</h4>
-
+<p></p>
 
 </div>
 </body>
