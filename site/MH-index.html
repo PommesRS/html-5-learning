@@ -61,12 +61,7 @@ ul li{
     cursor: pointer;
 }
 
-@media (max-width: 8000px) {
-    ul li {
-        color: white;
 
-    }
-}
 
 .dropbtn {
   float: left;
@@ -190,7 +185,7 @@ ul2 li{
     padding-right: 10px;
     padding-bottom: 7px;
     padding-left: 10px;
-    transition: background-color 0.3s;
+    transition: background-color 1s;
     transition: color 0.3s;
 }
 
@@ -201,8 +196,8 @@ ul2 li{
     padding-right: 10px;
     padding-bottom: 7px;
     padding-left: 10px;
-    transition: background-color 0.3s;
-    transition: color 0.3s;
+    transition: background-color 0.5s;
+    transition: color 0.5s;
 }
 
 .buybtn2{
@@ -214,6 +209,11 @@ ul2 li{
     padding-left: 10px;
     transition: background-color 0.3s;
     transition: color 0.3s;
+}
+
+.buybtn:hover{
+    background-color: purple;
+    color: black;
 }
 
 .buybtn1:hover{
@@ -232,10 +232,7 @@ ul2 li{
     color: white;
 }
 
-.buybtn:hover{
-    background-color: purple;
-    color: black;
-}
+
 
 .empf{
     font-size: 13px;
@@ -259,17 +256,26 @@ section{
 .subtitle1{
     font-size: 50px;
     text-shadow: -1px 2px 0.5px purple;
+    text-decoration: underline;
 }
 
 .subtitle2{
     font-size: 50px;
     text-shadow: -1px 2px 0.5px yellow;
+    text-decoration: underline;
 }
 
 .subtitle3{
     font-size: 50px;
     text-shadow: -1px 2px 0.5px red;
+    text-decoration: underline;
 }
+
+
+
+/*Products end*/
+
+/*mobile device start*/
 
 @media (min-width: 25px) and (max-width: 1319px) {
     .bsptxt1{
@@ -279,10 +285,24 @@ section{
     }
 }
 
-/*Products end*/
+@media (max-width: 8000px) {
+    ul li {
+        color: white;
+
+    }
+}
+
+/*moble device end*/
 
 /*Main content end*/
 
+/*Footer start*/
+
+    #footer{
+        font-size: 10px;
+    }
+
+/*Footer end*/
 
 </style>
 </head>
@@ -348,8 +368,7 @@ section{
 <!--===============================--
         Footer
 --===============================-->
-<div>
-
+<div id="footer">
 <p>&copy; 2020 <strong>menschen-handel.com</strong></p>
 <p>menschen-handel@m-h.com</p>
 <p>owned by <strong>Frank Huan</strong> (chinesisch)</p>
