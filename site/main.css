@@ -1,44 +1,64 @@
-*{
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+ header li{
+    list-style: none;
+}
+a:link, a:visited {
+  text-decoration: none;
+  background-color: lightgrey;
+  color: black;
+  display: block;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+a:hover, a:active {
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+  transform:translate(5px,-4px);
+  box-shadow: 
+    -1px 2px 0.5px hsl(0,0%,52%), 
+    -2px 3px 0.5px hsl(0,0%,53%), 
+    -3px 4px 0.5px hsl(0,0%,54%), 
+    -4px 5px 0.5px hsl(0,0%,55%), 
+    -5px 6px 1.5px hsl(0,0%,56%), 
+    -6px 7px 0.5px hsl(0,0%,57%), 
+    -7px 8px 0.5px hsl(0,0%,58%), 
+    -8px 9px 0.5px hsl(0,0%,59%), 
+    -9px 10px 0.5px hsl(0,0%,60%), 
+    -10px 11px 0.5px hsl(0,0%,61%), 
+    -11px 12px 0.5px hsl(0,0%,62%), 
+    -12px 13px 0.5px hsl(0,0%,63%), 
+    -13px 14px 0.5px hsl(0,0%,64%), 
+    -14px 15px 0.5px hsl(0,0%,65%), 
+    -15px 16px 0.5px hsl(0,0%,66%) 
 }
 
 body{
-  background:
+  background: lightgrey;
+  box-shadow:;
 }
 
-button{
-  width: 50;
-  height: 50;
-  font-size: 25px;
-  margin: 2px;
-  cursor: pointer;
-  background: #607d8b;
-  border: none;
-  color: white;
-  transition: 0.5s;
-  outline: none;
-}
-
-button:hover{
-  background: #5f6f7f;
-}
-
-#answer-view{
-  width: 218px;
-  border: none;
-  color: #607d8b;
-  outline: none;
-  cursor: default;
-  font-size: 25px;
-  padding: 10px;
-  margin: 2px 4px;
-}
-         
-.outer{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+h1{
+  background-color: lightgrey;
+  letter-spacing: .15em;
+  color: hsl(0,0%,94%);
+  text-shadow: 
+    -1px 2px 0.5px hsl(0,0%,52%), 
+    -2px 3px 0.5px hsl(0,0%,53%), 
+    -3px 4px 0.5px hsl(0,0%,54%), 
+    -4px 5px 0.5px hsl(0,0%,55%), 
+    -5px 6px 1.5px hsl(0,0%,56%), 
+    -6px 7px 0.5px hsl(0,0%,57%), 
+    -7px 8px 0.5px hsl(0,0%,58%), 
+    -8px 9px 0.5px hsl(0,0%,59%), 
+    -9px 10px 0.5px hsl(0,0%,60%), 
+    -10px 11px 0.5px hsl(0,0%,61%), 
+    -11px 12px 0.5px hsl(0,0%,62%), 
+    -12px 13px 0.5px hsl(0,0%,63%), 
+    -13px 14px 0.5px hsl(0,0%,64%), 
+    -14px 15px 0.5px hsl(0,0%,65%), 
+    -15px 16px 0.5px hsl(0,0%,66%) 
+    
 }

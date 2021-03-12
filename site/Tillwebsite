@@ -1,0 +1,94 @@
+<html>
+<head>	
+	<title> Nähmarke layout </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+	background-color: #F4A460;
+}
+
+.heading {
+	font-weight: 600;	
+	color: black;
+	font-size: 60px;
+	font-family: "Courier New", Courier, monospace;
+	text-align: center;
+	margin: 10px;
+	padding: 10px;
+}
+
+.dropbtn {	
+	margin-top: 20px;
+	margin-right: 800px;
+	width: 250px;
+	background-color: #FA8072;
+	color: black;
+  	padding: 18px;
+  	font-size: 20px;
+  	border: none;
+}
+
+.dropdown {
+  	position: relative;
+  	display: inline-block;
+}
+
+.dropdown-content {
+	text-align: left;
+	font-size: 22px;
+	font-weight: 200;
+	font-family: Arial;
+  	display: none;
+  	position: absolute;
+  	background-color: #FA8072;
+  	min-width: 250px;
+  	box-shadow: 0px 20px 40px 0px rgba(0,0,0,0.2);
+  	z-index: 1;
+}
+
+.dropdown-content a {
+  	color: black;
+  	padding: 1px 16px;
+  	text-decoration: none;
+  	display: block;
+}
+
+	.dropdown-content a:hover {background-color: #CD5C5C;}
+
+	.dropdown:hover .dropdown-content {display: block;}
+
+	.dropdown:hover .dropbtn {background-color: #CD5C5C;}
+
+</style>	
+
+</head>
+
+<body>
+
+	<div class="heading">
+		inTINKERcated
+	
+	<div class="header">
+
+		
+	<div class="main">
+	<div class="footer">
+	
+	<div class="dropdown">
+  	<button class="dropbtn">Produkte</button>
+  	<div class="dropdown-content">
+    		<a href="#">Lesekochen</a>
+    		<a href="#">Handtaschen</a>
+		<a href="#">Schürzen</a>
+		<a href="#">Schultüten</a>
+		<a href="#">Federtaschen</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
